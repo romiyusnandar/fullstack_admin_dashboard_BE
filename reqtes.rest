@@ -1,0 +1,141 @@
+# CREATE ADMIN ROLE
+POST http://localhost:4000/users
+Content-Type: application/json
+
+{
+  "name": "Romi Yusnandar",
+  "email": "romi@gmail.com",
+  "password": "romi1234",
+  "confirmPassword": "romi1234",
+  "role": "admin"
+}
+###
+# CREATE USER ROLE
+POST http://localhost:4000/users
+Content-Type: application/json
+
+{
+  "name": "User Login",
+  "email": "user@gmail.com",
+  "password": "user1234",
+  "confirmPassword": "user1234",
+  "role": "user"
+}
+###
+# UPDATE USER
+PATCH  http://localhost:4000/user/4d34baeb-1c04-4d72-b3e8-c3b73704327f
+Content-Type: application/json
+
+{
+  "name": "Romi Yusn",
+  "email": "romi@gmail.com",
+  "password": "",
+  "confirmPassword": "",
+  "role": "admin"
+}
+
+###
+# delete user
+DELETE  http://localhost:4000/user/dfab1ae1-626a-4d95-a8e5-04db232fffeb
+
+###
+# GET ALL USER
+GET http://localhost:4000/users
+
+###
+# GET SINGLE USER
+GET http://localhost:4000/user/e60e7430-95c2-40c9-a9da-04e41e75f818
+
+###
+# LOGIN USER ROLE
+POST http://localhost:4000/login
+Content-Type: application/json
+
+{
+  "email": "user@gmail.com",
+  "password": "user1234"
+}
+
+###
+# LOGIN ADMIN ROLE
+POST http://localhost:4000/login
+Content-Type: application/json
+
+{
+  "email": "admin@gmail.com",
+  "password": "admin1234"
+}
+
+# get me
+###
+GET http://localhost:4000/me
+
+#
+### logout
+DELETE  http://localhost:4000/logout
+
+###
+# GET ALL CUSTOMER
+GET http://localhost:4000/customers
+
+###
+# GET CUSTOMER BY ID
+GET http://localhost:4000/customer/2cc69729-6617-4000-9d75-de464b5068e5
+
+###
+# DELETE CUSTOMER
+DELETE http://localhost:4000/customer/b3175a19-8d17-40c6-b493-f6f61124a6bd
+
+###
+# GET ALL PRODUCT
+GET http://localhost:4000/products
+
+###
+# GET PRODUCT by id
+GET http://localhost:4000/product/ea3bbb94-acfa-493f-91fe-41705eb21805
+
+###
+# POST PRODUCT
+POST http://localhost:4000/products
+Content-Type: application/json
+
+{
+  "name": "Paket Aqiqah (L) 100 Box",
+  "price": 6500000
+}
+
+###
+# POST CUSTOMMER
+POST http://localhost:4000/customers
+Content-Type: application/json
+
+{
+  "name": "Yuda haha",
+  "no_whatsapp": "082233456678",
+  "productId": "35a9c8c2-4db9-4614-8ce7-1e5eb730f1a5"
+}
+
+###
+# UPDATE CUSTOMMER
+PATCH http://localhost:4000/customer/31fa645f-9085-4c3c-9a4b-f679e12770b1
+Content-Type: application/json
+
+{
+  "name": "Andri Maulana Updated",
+  "no_whatsapp": "08123456789",
+  "productId": "1"
+}
+
+###
+# UPDATE PRODUCT
+PATCH  http://localhost:4000/product/ea3bbb94-acfa-493f-91fe-41705eb21805
+Content-Type: application/json
+
+{
+  "name": "Paket turbolizer updated 2",
+  "price": 100000
+}
+
+###
+# DELETE PRODUCT
+DELETE  http://localhost:4000/product/2

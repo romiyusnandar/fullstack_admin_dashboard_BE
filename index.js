@@ -17,6 +17,10 @@ import Sequelizestore from "connect-session-sequelize";
 
 dotenv.config();
 
+// sinkronasi database
+// (async() => {
+//   await database.sync();
+// })();
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
